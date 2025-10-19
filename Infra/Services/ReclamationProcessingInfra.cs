@@ -7,20 +7,20 @@ using System.Text.Json.Serialization;
 
 namespace ReclamacoesBank.Infra.Services
 {
-    public class ReclamationProcessingService : IReclamationProcessingService
+    public class ReclamationProcessingInfra : IReclamationProcessingService
     {
         private readonly IReclamationRepository _repository;
         private readonly IDataMeshService _dataMeshService;
         private readonly INotificationService _notificationService;
         private readonly ClassificadorReclamacao _classifier;
-        private readonly ILogger<ReclamationProcessingService> _logger;
+        private readonly ILogger<ReclamationProcessingInfra> _logger;
 
-        public ReclamationProcessingService(
+        public ReclamationProcessingInfra(
             IReclamationRepository repository,
             IDataMeshService dataMeshService,
             INotificationService notificationService,
             ClassificadorReclamacao classifier,
-            ILogger<ReclamationProcessingService> logger)
+            ILogger<ReclamationProcessingInfra> logger)
         {
             _repository = repository;
             _dataMeshService = dataMeshService;

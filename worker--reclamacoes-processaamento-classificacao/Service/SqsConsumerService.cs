@@ -38,7 +38,7 @@ namespace ReclamacoesBank.Worker
             using (var scope = _serviceProvider.CreateScope())
             {
                 var sqsClient = scope.ServiceProvider.GetRequiredService<IAmazonSQS>();
-                var processingService = scope.ServiceProvider.GetRequiredService<ReclamationProcessingService>();
+                var processingService = scope.ServiceProvider.GetRequiredService<ReclamationProcessingInfra>();
 
                 var receiveRequest = new ReceiveMessageRequest
                 {

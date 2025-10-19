@@ -34,6 +34,7 @@ namespace Reclamacoes.Domain.Services
             }
 
             var cleanedText = reclamation.ReclamationUserText.ToLowerInvariant();
+            //limpa as palavras para serem comparadas com a lista de palavras chave
             var tokens = Regex.Replace(cleanedText, "[^a-zA-Z0-9áéíóúãõâêîôûç ]", "")
                              .Split(new char[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries)
                              .Distinct()

@@ -12,7 +12,7 @@ namespace Test.ServiceTests
         private readonly Mock<IReclamationRepository> _mockRepository = new();
         private readonly Mock<IDataMeshService> _mockDataMeshService = new();
         private readonly Mock<INotificationService> _mockNotificationService = new();
-        private readonly Mock<ILogger<ReclamationProcessingService>> _mockLogger = new();
+        private readonly Mock<ILogger<ReclamationProcessingInfra>> _mockLogger = new();
 
         private readonly ClassificadorReclamacao _classifier;
 
@@ -46,7 +46,7 @@ namespace Test.ServiceTests
                            .Callback<Reclamation>(r => savedReclamation = r)
                            .Returns(Task.CompletedTask);
 
-            var service = new ReclamationProcessingService(
+            var service = new ReclamationProcessingInfra(
                 _mockRepository.Object,
                 _mockDataMeshService.Object,
                 _mockNotificationService.Object,
