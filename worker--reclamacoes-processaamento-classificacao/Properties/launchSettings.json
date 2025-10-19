@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "worker--reclamacoes-processaamento-classificacao": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
