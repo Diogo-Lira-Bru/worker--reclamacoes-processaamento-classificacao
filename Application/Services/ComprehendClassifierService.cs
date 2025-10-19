@@ -12,7 +12,7 @@ namespace ReclamacoesBank.Infra.Services
         private readonly IAmazonComprehend _comprehendClient;
         private readonly ILogger<ComprehendClassifierService> _logger;
         private readonly ClassificadorReclamacao _manualClassifier;
-        private readonly string _customEndpointArn = "ARN_DO_SEU_ENDPOINT_COMPREHEND";
+        private readonly string _customEndpointArn = "ARN_COMPREHEND";
 
         public ComprehendClassifierService(
             IAmazonComprehend comprehendClient,
